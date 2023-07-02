@@ -2,26 +2,102 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+body{
+    overflow-x: hidden;
+    
+}
+@keyframes quiet {
+    25%{
+      transform: scaleY(.6);
+    }
+    50%{
+      transform: scaleY(.4);
+    }
+    75%{
+      transform: scaleY(.8);
+    }
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+  
+  @keyframes normal {
+    25%{
+      transform: scaleY(1);
+    }
+    50%{
+      transform: scaleY(.4);
+    }
+    75%{
+      transform: scaleY(.6);
+    }
+  }
+  @keyframes loud {
+    25%{
+      transform: scaleY(1);
+    }
+    50%{
+      transform: scaleY(.4);
+    }
+    75%{
+      transform: scaleY(1.2);
+    }
+  }
+  /* body{
+    display: flex;
+    justify-content: center;
+  
+    margin: 0;padding: 0;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .box33Container{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    --boxSize: 8px;
+    --gutter: 4px;
+    width: calc((var(--boxSize) + var(--gutter)) * 5);
+  }
+  
+  .box33{
+    transform: scaleY(.4);
+    height: 100%;
+    width: var(--boxSize);
+    background-image: linear-gradient(rgb(16, 43, 94), rgb(49, 21, 192));
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    border-radius: 8px;
+  }
+  
+  .box133{
+    animation-name: quiet;
+  }
+  
+  .box233{
+    animation-name: normal;
+  }
+  
+  .box333{
+    animation-name: quiet;
+  }
+  
+  .box433{
+    animation-name: loud;
+  }
+  
+  .box533{
+    animation-name: quiet;
+  } */
+  .stic1{
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .stic2{
+   
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    
+  }
